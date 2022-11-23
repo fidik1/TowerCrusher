@@ -60,8 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e07f50732b9f73438a41eb97ccb2c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleDeath: {fileID: 4396615891943116033, guid: ae167a9ab2528534bad51395b43e0fff,
+  _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
+  targetPos: {x: 0, y: 0, z: 0}
 --- !u!114 &4411207417540634438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bae6ec50beaad34d9a0b02a8cd27f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _circle: {fileID: 0}
+  blocks: []
 --- !u!1 &2352253384244891241
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,8 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e07f50732b9f73438a41eb97ccb2c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleDeath: {fileID: 4396615891943116033, guid: ae167a9ab2528534bad51395b43e0fff,
+  _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
+  targetPos: {x: 0, y: 0, z: 0}
 --- !u!114 &2208481313324727928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bae6ec50beaad34d9a0b02a8cd27f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _circle: {fileID: 0}
+  blocks: []
 --- !u!1 &4436840193994287538
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,8 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e07f50732b9f73438a41eb97ccb2c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleDeath: {fileID: 4396615891943116033, guid: ae167a9ab2528534bad51395b43e0fff,
+  _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
+  targetPos: {x: 0, y: 0, z: 0}
 --- !u!114 &113826294751293215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bae6ec50beaad34d9a0b02a8cd27f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _circle: {fileID: 0}
+  blocks: []
 --- !u!1 &4447028866136586523
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bae6ec50beaad34d9a0b02a8cd27f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _circle: {fileID: 0}
+  blocks: []
 --- !u!1 &5673295817599187575
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,8 +503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e07f50732b9f73438a41eb97ccb2c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleDeath: {fileID: 4396615891943116033, guid: ae167a9ab2528534bad51395b43e0fff,
+  _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
+  targetPos: {x: 0, y: 0, z: 0}
 --- !u!114 &2541922911594429880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bae6ec50beaad34d9a0b02a8cd27f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _circle: {fileID: 0}
+  blocks: []
 --- !u!1 &7193470875168822290
 GameObject:
   m_ObjectHideFlags: 0

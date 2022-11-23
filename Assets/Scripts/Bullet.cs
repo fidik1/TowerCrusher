@@ -5,19 +5,20 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public Vector3 point;
-    //[SerializeField] private Rigidbody _rb;
+    private Vector3 _startPos;
     [SerializeField] private float _speed;
 
     private const string blockTag = "BlockParent";
 
     private void Start()
     {
+        _startPos = transform.position;
         if (point == Vector3.zero)
             Destroy(gameObject);
         Destroy(gameObject, 4);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.position = Vector3.MoveTowards(transform.position, point, _speed);
         if (transform.position == point)
@@ -28,8 +29,8 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag(blockTag))
         {
-            Balance.instance.OnDestroyBlock();
-            other.GetComponent<Block>().DestroyBlock();
+            Balance.Instance.OnDestroyBlock();
+            other.GetComponent<Block>().DestroyBlock(_startPos);
             Destroy(gameObject);
         }
     }

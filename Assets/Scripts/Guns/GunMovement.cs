@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class GunMovement : MonoBehaviour
@@ -12,6 +12,10 @@ public class GunMovement : MonoBehaviour
     [SerializeField] private Transform _parent;
     [SerializeField] private int _currentLap;
 
+    public Vector3 _targetPos = new (0, 4.1f, -8f);
+    public float _timeToMerge = 1;
+    private bool isMerged;
+
     private Coroutine _coroutine;
 
     private int _laps;
@@ -19,8 +23,6 @@ public class GunMovement : MonoBehaviour
     private void Start()
     {
         _speedOfRotation = _minSpeedOfRotation;
-
-        Bonuses.instance.OnAddLap += UpdateLaps;
         Click.instance.OnClick += OnClick;
     }
 
@@ -37,15 +39,18 @@ public class GunMovement : MonoBehaviour
         _speedOfRotation = _minSpeedOfRotation;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        if (isMerged) 
+        {
+            if (transform.position == _targetPos)
+                Destroy(gameObject);
+            return;
+        }
         TrajectoryMovement();
     }
 
-    private void UpdateLaps()
-    {
-        _laps = Bonuses.instance.CurrentLaps;
-    }
+    public void UpdateLaps(int laps) => _laps = laps;
 
     private void TrajectoryMovement()
     {
@@ -59,7 +64,14 @@ public class GunMovement : MonoBehaviour
     private void NewLap()
     {
         _currentLap = 0;
-        _parent.transform.localPosition = new Vector3(_parent.transform.localPosition.x, -6.4f, _parent.transform.localPosition.z);
+        _parent.transform.localPosition = new Vector3(_parent.transform.localPosition.x, 0, _parent.transform.localPosition.z);
+    }
+
+    public void OnMerge()
+    {
+        isMerged = true;
+        transform.DOMove(_targetPos, _timeToMerge);
+        Destroy(transform.parent.gameObject, _timeToMerge + 0.02f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -71,5 +83,10 @@ public class GunMovement : MonoBehaviour
             else
                 _currentLap++;
         }
+    }
+
+    private void OnDestroy()
+    {
+        Click.instance.OnClick -= OnClick;
     }
 }

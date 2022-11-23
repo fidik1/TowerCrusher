@@ -10,6 +10,8 @@ TagManager:
   - Floor
   - BlockParent
   - GunDefault
+  - GunFirst
+  - Cube
   layers:
   - Default
   - TransparentFX

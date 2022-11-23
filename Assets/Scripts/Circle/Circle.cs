@@ -27,6 +27,7 @@ public class Circle : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (CameraMovement.Instance == null) return;
         LayerDestroyed?.Invoke(this);
     }
 }

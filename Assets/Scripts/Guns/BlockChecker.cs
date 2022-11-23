@@ -41,7 +41,7 @@ public class BlockChecker : MonoBehaviour
             }
         }
 
-        if (closest.transform.position != null)
+        if (closest != null)
         {
             colliders.Remove(closest);
             return closest.transform.position;

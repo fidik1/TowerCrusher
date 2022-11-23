@@ -31,6 +31,6 @@ public class CircleManager : MonoBehaviour
     private void OnLayerDestroy(Circle sender)
     {
         sender.LayerDestroyed -= OnLayerDestroy;
-        CameraMovement.instance.OnCircleDestroy();
+        CameraMovement.Instance.OnCircleDestroy();
     }
 }
