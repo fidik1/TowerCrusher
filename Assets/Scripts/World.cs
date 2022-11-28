@@ -19,6 +19,11 @@ public class World : MonoBehaviour
         gunsController = new(_parentGuns, _gunData);
     }
 
+    private void Start()
+    {
+        ExecuteWithDelay(.5f, gunsController.BonusLapExecuted);
+    }
+
     public static void ExecuteWithDelay(float time, Action callback)
     {
         DOTween.To(() => 0, x => { }, 1, time).OnComplete(() => callback()).SetLink(Instance.gameObject);

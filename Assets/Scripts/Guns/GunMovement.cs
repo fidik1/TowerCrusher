@@ -18,7 +18,7 @@ public class GunMovement : MonoBehaviour
 
     private Coroutine _coroutine;
 
-    private int _laps;
+    [SerializeField] private int _laps;
 
     private void Start()
     {
@@ -61,7 +61,7 @@ public class GunMovement : MonoBehaviour
         }
     }
 
-    private void NewLap()
+    private void ResetLap()
     {
         _currentLap = 0;
         _parent.transform.localPosition = new Vector3(_parent.transform.localPosition.x, 0, _parent.transform.localPosition.z);
@@ -69,6 +69,7 @@ public class GunMovement : MonoBehaviour
 
     public void OnMerge()
     {
+        _targetPos.y += Camera.main.transform.position.y;
         isMerged = true;
         transform.DOMove(_targetPos, _timeToMerge);
         Destroy(transform.parent.gameObject, _timeToMerge + 0.02f);
@@ -78,8 +79,9 @@ public class GunMovement : MonoBehaviour
     {
         if (other.CompareTag("FinishLap"))
         {
+            print(other.tag);
             if (_currentLap >= _laps)
-                NewLap();
+                ResetLap();
             else
                 _currentLap++;
         }

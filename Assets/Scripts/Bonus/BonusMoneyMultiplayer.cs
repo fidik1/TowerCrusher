@@ -7,7 +7,7 @@ public class BonusMoneyMultiplayer : BonusData
 {
     public override void Execute()
     {
-        
+        Balance.Instance.IncreaseMoneyMultiplayer(World.Instance.bonusManager.GetBonus(3).CurrentLevel);
     }
 
     public override bool Enabled { get { return true; } }

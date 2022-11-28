@@ -16,14 +16,14 @@ public class GunsController
 
     public GunsController(Transform parent, GunData[] gunData)
     {
-        _typeLastLevelGun = System.Enum.GetValues(typeof(TypeGun)).Cast<TypeGun>().Last();
+        _typeLastLevelGun = Enum.GetValues(typeof(TypeGun)).Cast<TypeGun>().Last();
         _parent = parent;
         _gunData = gunData;
     }
 
     private List<Gun> ExtractGuns()
     {
-        TypeGun[] types = System.Enum.GetValues(typeof(TypeGun)).Cast<TypeGun>().ToArray();
+        TypeGun[] types = Enum.GetValues(typeof(TypeGun)).Cast<TypeGun>().ToArray();
 
         List<Gun> max = new();
 
@@ -39,7 +39,6 @@ public class GunsController
             if (max.Count < gunList.Count)
                 max = gunList;
         }
-        Debug.Log(max.Count);
         return max;
     }
     //_gunList.GroupBy(i => i).Where(g => g.Count() > 3).Select(y => y.Key).ToList();
@@ -101,11 +100,11 @@ public class GunsController
         return _gunList;
     }
 
-    public void BonusLapExecuted(Bonus bonus)
+    public void BonusLapExecuted()
     {
         foreach (Gun gun in _gunList)
         {
-            gun.gunMovement.UpdateLaps(bonus.CurrentLevel);
+            gun.gunMovement.UpdateLaps(World.Instance.bonusManager.GetBonus(2).CurrentLevel);
         }
     }
 

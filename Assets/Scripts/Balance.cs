@@ -9,6 +9,7 @@ public class Balance : MonoBehaviour
     public Action OnChangeMoney;
 
     [SerializeField] private float incomeFromBlock;
+    private float moneyMultiplayer;
 
     private void Awake() => Instance = this;
 
@@ -18,8 +19,12 @@ public class Balance : MonoBehaviour
     {
         Money += price;
         OnChangeMoney?.Invoke();
-        print("Invoked");
     }
 
-    public void OnDestroyBlock() => ChangeBalance(incomeFromBlock * World.Instance.bonusManager.GetBonus(3).CurrentLevel * 0.1f + 0.9f);
+    public void IncreaseMoneyMultiplayer(int moneyMultiplayer)
+    {
+        this.moneyMultiplayer += moneyMultiplayer;
+    }
+
+    public void OnDestroyBlock() => ChangeBalance(incomeFromBlock * moneyMultiplayer * 0.1f + 0.9f);
 }

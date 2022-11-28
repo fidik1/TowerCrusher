@@ -9,14 +9,17 @@ public class GunShoot : MonoBehaviour
     [SerializeField] private Transform _parent;
     [SerializeField] private BlockChecker _blockChecker;
     public float ShootCooldown { get; private set; }
-    public bool IsShooted { get; private set; }
+    public bool IsShooted { get; private set; } = true;
 
     protected virtual void Start()
     {
         Click.instance.OnClick += Shoot;
         ShootCooldown = _gun.Data.shootCooldown;
+        Invoke(nameof(ShootTrue), 0.5f);
         InvokeRepeating(nameof(Shoot), 3, 3);
     }
+
+    private void ShootTrue() => IsShooted = false;
 
     public virtual void Shoot()
     {
