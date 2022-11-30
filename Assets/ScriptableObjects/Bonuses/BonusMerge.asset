@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BonusMerge
   m_EditorClassIdentifier: 
   <BasePrice>k__BackingField: 1
-  <PriceMultiplayer>k__BackingField: 1
-  <MaxLevel>k__BackingField: 999
+  <PriceMultiplayer>k__BackingField: 1.5
+  <MaxLevel>k__BackingField: 99999
   <BonusName>k__BackingField: BonusMerge
