@@ -196,6 +196,7 @@ MonoBehaviour:
   _currentLap: 0
   _targetPos: {x: 0, y: 4.1, z: -8}
   _timeToMerge: 1
+  _laps: 0
 --- !u!54 &2122501983002811623
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -385,7 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Data>k__BackingField: {fileID: 11400000, guid: 7f4fa2ced14266d4384ba41fe35946a0,
     type: 2}
-  prefabParticle: {fileID: 8962998713938765076, guid: 88a72ae9fc174da45ab8f9cde2512d4c,
+  <PrefabParticle>k__BackingField: {fileID: 4396615891943116033, guid: ae167a9ab2528534bad51395b43e0fff,
     type: 3}
-  gunMovement: {fileID: 7582688461966842825}
-  typeGun: 0
+  <GunMovement>k__BackingField: {fileID: 7582688461966842825}
+  <TypeGun>k__BackingField: 0

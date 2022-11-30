@@ -8,7 +8,7 @@ public class BonusGun : BonusData
     public GunData gunData;
     public override void Execute()
     {
-        World.Instance.gunsController.CreateGun(gunData);
+        World.Instance.GunsController.CreateGun(gunData);
     }
 
     public override bool Enabled { get { return true; } }

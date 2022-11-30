@@ -9,8 +9,8 @@ public class BonusMerge : BonusData
 {
     public override void Execute()
     {
-        World.Instance.gunsController.Merge();
+        World.Instance.GunsController.Merge();
     }
 
-    public override bool Enabled { get { return World.Instance.gunsController.ReadyToMerge; } }
+    public override bool Enabled { get { return World.Instance.GunsController.ReadyToMerge; } }
 }

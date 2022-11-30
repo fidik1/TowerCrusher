@@ -12,11 +12,11 @@ public class InitGuns : MonoBehaviour
 
     public void Start()
     {
-        _gunsController = World.Instance.gunsController;
+        _gunsController = World.Instance.GunsController;
 
-        TypeGun[] types = System.Enum.GetValues(typeof(TypeGun)).Cast<TypeGun>().ToArray();
+        TypeGunEnum[] types = System.Enum.GetValues(typeof(TypeGunEnum)).Cast<TypeGunEnum>().ToArray();
 
-        foreach (TypeGun type in types)
+        foreach (TypeGunEnum type in types)
         {
             for (int i = 0; i < PlayerPrefs.GetInt(type.ToString()); i++)
             {

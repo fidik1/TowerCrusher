@@ -7,21 +7,22 @@ using System;
 public class World : MonoBehaviour
 {
     public static World Instance;
-    public GunsController gunsController;
-    public BonusManager bonusManager;
+    public GunsController GunsController { get; private set; }
+    [field: SerializeField] public BonusManager BonusManager { get; private set; }
 
+    [SerializeField] private Camera _camera;
     [SerializeField] private Transform _parentGuns;
     [SerializeField] private GunData[] _gunData;
 
     private void Awake()
     {
         Instance = this;
-        gunsController = new(_parentGuns, _gunData);
+        GunsController = new(_camera, _parentGuns, _gunData);
     }
 
     private void Start()
     {
-        ExecuteWithDelay(.5f, gunsController.BonusLapExecuted);
+        ExecuteWithDelay(.5f, GunsController.BonusLapExecuted);
     }
 
     public static void ExecuteWithDelay(float time, Action callback)

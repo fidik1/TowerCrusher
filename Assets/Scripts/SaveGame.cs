@@ -10,20 +10,21 @@ public class SaveGame : MonoBehaviour
 
     private void Start()
     {
-        _gunsController = World.Instance.gunsController;
-        _bonusManager = World.Instance.bonusManager;
+        _gunsController = World.Instance.GunsController;
+        _bonusManager = World.Instance.BonusManager;
+        print(_bonusManager);
     }
 
     private void Save()
     {
         PlayerPrefs.SetFloat("Balance", Balance.Instance.Money);
 
-        TypeGun[] types = System.Enum.GetValues(typeof(TypeGun)).Cast<TypeGun>().ToArray();
+        TypeGunEnum[] types = System.Enum.GetValues(typeof(TypeGunEnum)).Cast<TypeGunEnum>().ToArray();
 
-        foreach (TypeGun type in types)
+        foreach (TypeGunEnum type in types)
         {
             List<Gun> guns = _gunsController.GetGuns();
-            int a = _gunsController.GetGuns().Where(p => p.typeGun == type).Count();
+            int a = _gunsController.GetGuns().Where(p => p.TypeGun == type).Count();
             PlayerPrefs.SetInt(type.ToString(), a);
         }
 

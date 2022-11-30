@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public enum TypeGun
+public enum TypeGunEnum
 {
     GunDefault,
     GunFirst,
@@ -11,9 +11,9 @@ public enum TypeGun
 public class Gun : MonoBehaviour
 {
     [field: SerializeField] public GunData Data { get; private set; }
-    public GameObject prefabParticle;
-    public GunMovement gunMovement;
-    public TypeGun typeGun;
+    [field: SerializeField] public GameObject PrefabParticle { get; private set; }
+    [field: SerializeField] public GunMovement GunMovement { get; private set; }
+    [field: SerializeField] public TypeGunEnum TypeGun { get; private set; }
 
-    private void Start() => typeGun = Data.typeGun;
+    private void Start() => TypeGun = Data.typeGun;
 }
