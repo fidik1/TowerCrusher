@@ -8,13 +8,7 @@ public class Click : MonoBehaviour
     public Action OnClick;
     public static Click instance;
 
-    private void Awake()
-    {
-        instance = this;
-    }
+    private void Awake() => instance = this;
 
-    public void Clicked()
-    {
-        OnClick?.Invoke();
-    }
+    public void Clicked() => OnClick?.Invoke();
 }

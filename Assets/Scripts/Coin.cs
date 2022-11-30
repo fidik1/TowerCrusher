@@ -3,10 +3,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    private void Start()
-    {
-        Invoke(nameof(DestroyCoin), 3);
-    }
+    private void Start() => Invoke(nameof(DestroyCoin), 3);
 
     private void DestroyCoin()
     {

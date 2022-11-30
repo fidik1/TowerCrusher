@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4653858417166779175}
   - component: {fileID: 4816133096233512769}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: CubeParticle
   m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,5 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48fbd1f4a5dfd449a4a2090940fe283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPos: {x: 0, y: 0, z: 0}
   _force: 15
+  _rb: {fileID: 4653858417166779175}
