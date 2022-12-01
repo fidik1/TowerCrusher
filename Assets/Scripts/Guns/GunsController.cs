@@ -106,7 +106,7 @@ public class GunsController
     {
         foreach (Gun gun in _gunList)
         {
-            gun.GunMovement.UpdateLaps(World.Instance.BonusManager.GetBonus(2).CurrentLevel);
+            gun.GunMovement.UpdateLaps(World.Instance.BonusManager.GetBonus(2).CurrentLevel+1);
         }
     }
 

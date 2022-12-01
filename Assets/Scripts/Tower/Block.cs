@@ -7,6 +7,16 @@ public class Block : MonoBehaviour
 {
     [SerializeField] private CubeParticle _particleDeath;
     public Action<Block> BlockDestroyed;
+    [SerializeField] private Color _color;
+    [SerializeField] private Renderer _renderer;
+    private MaterialPropertyBlock _materialPropertyBlock;
+
+    private void Awake()
+    {
+        _materialPropertyBlock = new();
+        _materialPropertyBlock.SetColor("_BaseColor", _color);
+        _renderer.SetPropertyBlock(_materialPropertyBlock);
+    }
 
     public void DestroyBlock(Vector3 targetPos)
     {

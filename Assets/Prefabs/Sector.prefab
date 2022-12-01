@@ -17,7 +17,7 @@ GameObject:
   m_TagString: BlockParent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4903912130518967612
 Transform:
@@ -62,7 +62,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
-  targetPos: {x: 0, y: 0, z: 0}
+  _color: {r: 0.025269032, g: 0.754717, b: 0.010679938, a: 1}
+  _renderer: {fileID: 7294999085296694904}
 --- !u!114 &4411207417540634438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +94,7 @@ GameObject:
   m_TagString: BlockParent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5488370172147990208
 Transform:
@@ -138,7 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
-  targetPos: {x: 0, y: 0, z: 0}
+  _color: {r: 1, g: 0.45336097, b: 0, a: 1}
+  _renderer: {fileID: 5378685515488589236}
 --- !u!114 &2208481313324727928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +171,7 @@ GameObject:
   m_TagString: BlockParent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2234055692663683534
 Transform:
@@ -214,7 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
-  targetPos: {x: 0, y: 0, z: 0}
+  _color: {r: 1, g: 0, b: 0, a: 1}
+  _renderer: {fileID: 2958063996455322358}
 --- !u!114 &113826294751293215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +247,7 @@ GameObject:
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &840678086098834889
 Transform:
@@ -289,7 +292,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 67fb3053e6a44974e82cdfbc097b0082, type: 2}
+  - {fileID: 2100000, guid: 2007381793167984981f95afd3fa1054, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -326,7 +329,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4792555520580794854
 Transform:
@@ -376,7 +379,7 @@ GameObject:
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4421569296813555158
 Transform:
@@ -460,7 +463,7 @@ GameObject:
   m_TagString: BlockParent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6754065471440885416
 Transform:
@@ -505,7 +508,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
-  targetPos: {x: 0, y: 0, z: 0}
+  _color: {r: 0, g: 0.36551976, b: 0.8962264, a: 1}
+  _renderer: {fileID: 2695533334977666085}
 --- !u!114 &2541922911594429880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,7 +539,7 @@ GameObject:
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4116502541518079208
 Transform:
@@ -580,7 +584,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d61b2f8337ac7334c9540211b5728529, type: 2}
+  - {fileID: 2100000, guid: 2007381793167984981f95afd3fa1054, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -618,7 +622,7 @@ GameObject:
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7710296256979077537
 Transform:
@@ -663,7 +667,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97211de47d8d49747bf9f1cb51ce7da5, type: 2}
+  - {fileID: 2100000, guid: 2007381793167984981f95afd3fa1054, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
