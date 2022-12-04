@@ -7,7 +7,7 @@ public class BonusLap : BonusData
 {
     public override void Execute()
     {
-        World.Instance.GunsController.BonusLapExecuted();
+        World.Instance.MapsController.BonusLapExecuted();
     }
 
     public override bool Enabled { get { return true; } }

@@ -13,10 +13,8 @@ public class BonusButton : MonoBehaviour
 
     private Bonus _linkedBonus;
 
-    public void Init(Bonus bonus, Color color, string text)
+    public void Init(Bonus bonus)
     {
-        _colorEnabled = color;
-        _text.text = text;
         _linkedBonus = bonus;
         _linkedBonus.LevelRisen += UpdateText;
         Balance.Instance.OnChangeMoney += UpdateText;

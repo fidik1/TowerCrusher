@@ -10,7 +10,7 @@ public class GunMovement : MonoBehaviour
 
     [SerializeField] private float _speedOfLifting;
     [SerializeField] private Transform _parent;
-    [SerializeField] private int _currentLap;
+    public int CurrentLap { get; private set; }
 
     public Vector3 _targetPos = new (0, 4.1f, -8f);
     public float _timeToMerge = 1;
@@ -19,6 +19,8 @@ public class GunMovement : MonoBehaviour
     private Coroutine _coroutine;
 
     [SerializeField] private int _laps;
+
+    public void Init(int currentLap) => CurrentLap = currentLap;
 
     private void Start()
     {
@@ -55,7 +57,7 @@ public class GunMovement : MonoBehaviour
     private void TrajectoryMovement()
     {
         _parent.transform.eulerAngles = new Vector3(0, _parent.transform.eulerAngles.y + _speedOfRotation, 0);
-        if (_currentLap > 0)
+        if (CurrentLap > 0)
         {
             _parent.transform.position = new Vector3(0, _parent.transform.position.y + _speedOfLifting, 0);
         }
@@ -63,7 +65,7 @@ public class GunMovement : MonoBehaviour
 
     private void ResetLap()
     {
-        _currentLap = 0;
+        CurrentLap = 0;
         _parent.transform.localPosition = new Vector3(_parent.transform.localPosition.x, 0, _parent.transform.localPosition.z);
     }
 
@@ -80,10 +82,10 @@ public class GunMovement : MonoBehaviour
         if (other.CompareTag("FinishLap"))
         {
             print(other.tag);
-            if (_currentLap >= _laps)
+            if (CurrentLap >= _laps)
                 ResetLap();
             else
-                _currentLap++;
+                CurrentLap++;
         }
     }
 

@@ -5,9 +5,7 @@ using System.Linq;
 
 public class BonusManager : MonoBehaviour
 {
-    [SerializeField] private BonusButton _buttonPrefab;
-    [SerializeField] private Color32[] _buttonColor;
-    [SerializeField] private string[] _buttonText;
+    [SerializeField] private List<BonusButton> _bonusButtons;
     [SerializeField] private List<BonusData> _bonusDataList;
     private List<Bonus> _bonusList;
 
@@ -19,8 +17,7 @@ public class BonusManager : MonoBehaviour
         {
             Bonus newBonus = new (bonusData);
             _bonusList.Add(newBonus);
-            BonusButton button = Instantiate(_buttonPrefab, transform);
-            button.Init(newBonus, _buttonColor[i], _buttonText[i]);
+            _bonusButtons[i].Init(newBonus);
             i++;
         }
     }

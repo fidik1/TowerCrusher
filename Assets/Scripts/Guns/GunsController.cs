@@ -51,7 +51,6 @@ public class GunsController
 
         List<Gun> listGun = ExtractGuns();
         ReadyToMerge = listGun.Count >= 3 && listGun[0].TypeGun != _typeLastLevelGun;
-        BonusLapExecuted();
     }
 
     public void RemoveGun(Gun gun)
@@ -73,6 +72,7 @@ public class GunsController
             {
                 gun.transform.DOMove(_gunList[0].transform.position, 0.5f).SetLink(gun.gameObject);
                 gun.transform.DORotate(new Vector3(0, _gunList[^1].transform.eulerAngles.y - _offset, 0), 0.5f);
+                gun.GunMovement.Init(_gunList[^1].GunMovement.CurrentLap);
             }
             else
             {
@@ -98,13 +98,5 @@ public class GunsController
     public List<Gun> GetGuns()
     {
         return _gunList;
-    }
-
-    public void BonusLapExecuted()
-    {
-        foreach (Gun gun in _gunList)
-        {
-            gun.GunMovement.UpdateLaps(World.Instance.BonusManager.GetBonus(2).CurrentLevel+1);
-        }
     }
 }
