@@ -12,7 +12,6 @@ public class SaveGame : MonoBehaviour
     {
         _gunsController = World.Instance.GunsController;
         _bonusManager = World.Instance.BonusManager;
-        print(_bonusManager);
     }
 
     private void Save()

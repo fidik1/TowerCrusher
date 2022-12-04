@@ -11,7 +11,7 @@ public class BonusManager : MonoBehaviour
     [SerializeField] private List<BonusData> _bonusDataList;
     private List<Bonus> _bonusList;
 
-    private void Start()
+    private void Awake()
     {
         _bonusList = new List<Bonus>();
         int i = 0;

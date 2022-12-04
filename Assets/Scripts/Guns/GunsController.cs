@@ -13,17 +13,14 @@ public class GunsController
     public int maxLevelCount;
     private const float _offset = 30;
 
-    private readonly GunData[] _gunData;
-
-    public GunsController(Camera camera,Transform parent, GunData[] gunData)
+    public GunsController(Camera camera, Transform parent)
     {
         _camera = camera;
         _typeLastLevelGun = Enum.GetValues(typeof(TypeGunEnum)).Cast<TypeGunEnum>().Last();
         _parent = parent;
-        _gunData = gunData;
     }
 
-    private List<Gun> ExtractGuns()
+    public List<Gun> ExtractGuns()
     {
         TypeGunEnum[] types = Enum.GetValues(typeof(TypeGunEnum)).Cast<TypeGunEnum>().ToArray();
 
@@ -54,6 +51,7 @@ public class GunsController
 
         List<Gun> listGun = ExtractGuns();
         ReadyToMerge = listGun.Count >= 3 && listGun[0].TypeGun != _typeLastLevelGun;
+        BonusLapExecuted();
     }
 
     public void RemoveGun(Gun gun)
@@ -109,24 +107,4 @@ public class GunsController
             gun.GunMovement.UpdateLaps(World.Instance.BonusManager.GetBonus(2).CurrentLevel+1);
         }
     }
-
-    private GunMovement _gunMovement;
-    private int index;
-
-    public void Merge()
-    {
-        List<Gun> mergeGunList = World.Instance.GunsController.ExtractGuns();
-        for (int i = 0; i < 3; i++)
-        {
-            mergeGunList[i].GunMovement.OnMerge();
-            RemoveGun(mergeGunList[i]);
-        }
-        index = (int)mergeGunList[0].TypeGun;
-
-        _gunMovement = mergeGunList[0].GunMovement;
-
-        World.ExecuteWithDelay(_gunMovement._timeToMerge, OnMerge);
-    }
-
-    private void OnMerge() => CreateGun(_gunData[index + 1]);
 }

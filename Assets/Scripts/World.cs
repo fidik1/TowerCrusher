@@ -8,6 +8,7 @@ public class World : MonoBehaviour
 {
     public static World Instance;
     public GunsController GunsController { get; private set; }
+    public GunsMerge GunsMerge { get; private set; }
     [field: SerializeField] public BonusManager BonusManager { get; private set; }
 
     [SerializeField] private Camera _camera;
@@ -16,8 +17,9 @@ public class World : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-        GunsController = new(_camera, _parentGuns, _gunData);
+        if (Instance == null ) Instance = this;
+        GunsController = new(_camera, _parentGuns);
+        GunsMerge = new(_gunData);
     }
 
     private void Start()

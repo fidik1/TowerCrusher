@@ -18,7 +18,7 @@ public class CubeCollector : MonoBehaviour
             Destroy(collision.gameObject);
             if (_count >= 3)
             {
-                Instantiate(_coins[Random.Range(0, 3)], new Vector3(_transform.position.x - Random.Range(-0.3f, 0.3f), _transform.position.y - 0.25f, _transform.position.z), Quaternion.identity);
+                Instantiate(_coins[Random.Range(0, 3)], new Vector3(_transform.position.x - Random.Range(-0.3f, 0.3f), _transform.position.y - 0.3f, _transform.position.z), Quaternion.identity);
                 _count = 0;
             }
         }
