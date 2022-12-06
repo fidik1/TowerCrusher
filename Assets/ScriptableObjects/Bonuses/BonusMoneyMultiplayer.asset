@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fca405d9342fb94fa7f958fee6740be, type: 3}
   m_Name: BonusMoneyMultiplayer
   m_EditorClassIdentifier: 
-  <BasePrice>k__BackingField: 25
+  <BasePrice>k__BackingField: 1
   <PriceMultiplayer>k__BackingField: 1.5
   <MaxLevel>k__BackingField: 999
   <BonusName>k__BackingField: BonusMoneyMultiplayer
-  gunData: {fileID: 0}

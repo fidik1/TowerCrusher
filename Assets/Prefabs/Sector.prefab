@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
-  _color: {r: 0.025269032, g: 0.754717, b: 0.010679938, a: 1}
+  _color: {r: 0.010631965, g: 0.6698113, b: 0, a: 1}
   _renderer: {fileID: 7294999085296694904}
 --- !u!114 &4411207417540634438
 MonoBehaviour:
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
-  _color: {r: 1, g: 0.45336097, b: 0, a: 1}
+  _color: {r: 0.8018868, g: 0.3647799, b: 0, a: 1}
   _renderer: {fileID: 5378685515488589236}
 --- !u!114 &2208481313324727928
 MonoBehaviour:
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
-  _color: {r: 1, g: 0, b: 0, a: 1}
+  _color: {r: 0.7490196, g: 0, b: 0.043137256, a: 1}
   _renderer: {fileID: 2958063996455322358}
 --- !u!114 &113826294751293215
 MonoBehaviour:
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _particleDeath: {fileID: 4816133096233512769, guid: 43647c251c232b14196c5151ce1d035c,
     type: 3}
-  _color: {r: 0, g: 0.36551976, b: 0.8962264, a: 1}
+  _color: {r: 0, g: 0.28734455, b: 0.7075472, a: 1}
   _renderer: {fileID: 2695533334977666085}
 --- !u!114 &2541922911594429880
 MonoBehaviour:

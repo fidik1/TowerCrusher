@@ -9,7 +9,7 @@ public class World : MonoBehaviour
     public static World Instance;
     public GunsController GunsController { get; private set; }
     public GunsMerge GunsMerge { get; private set; }
-    public MapsController MapsController { get; private set; }
+    public LapsController LapsController { get; private set; }
     [field: SerializeField] public BonusManager BonusManager { get; private set; }
 
     [SerializeField] private Camera _camera;
@@ -21,12 +21,12 @@ public class World : MonoBehaviour
         if (Instance == null ) Instance = this;
         GunsController = new(_camera, _parentGuns);
         GunsMerge = new(_gunData);
-        MapsController = new();
+        LapsController = new();
     }
 
     private void Start()
     {
-        ExecuteWithDelay(.5f, MapsController.BonusLapExecuted);
+        ExecuteWithDelay(.5f, LapsController.BonusLapExecuted);
     }
 
     public static void ExecuteWithDelay(float time, Action callback)

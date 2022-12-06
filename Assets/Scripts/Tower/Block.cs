@@ -23,12 +23,12 @@ public class Block : MonoBehaviour
         BlockDestroyed?.Invoke(this);
         Vector3 vector = new (UnityEngine.Random.Range(-0.3f, 0.3f), UnityEngine.Random.Range(-0.3f, 0.3f), UnityEngine.Random.Range(-0.3f, 0.3f));
         CubeParticle cube = Instantiate(_particleDeath, transform.position - vector, Quaternion.identity, transform.parent);
-        cube.SetTargetPos(targetPos);
+        cube.Init(targetPos, _materialPropertyBlock);
         CubeParticle cube1 = Instantiate(_particleDeath, transform.position, Quaternion.identity, transform.parent);
-        cube1.SetTargetPos(targetPos);
+        cube1.Init(targetPos, _materialPropertyBlock);
         vector = new(UnityEngine.Random.Range(-0.3f, 0.3f), UnityEngine.Random.Range(-0.3f, 0.3f), UnityEngine.Random.Range(-0.3f, 0.3f));
         CubeParticle cube2 = Instantiate(_particleDeath, transform.position - vector, Quaternion.identity, transform.parent);
-        cube2.SetTargetPos(targetPos);
+        cube2.Init(targetPos, _materialPropertyBlock);
         Destroy(gameObject);
     }
 }

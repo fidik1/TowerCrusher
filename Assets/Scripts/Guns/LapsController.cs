@@ -1,4 +1,4 @@
-public class MapsController
+public class LapsController
 {
     public void BonusLapExecuted()
     {

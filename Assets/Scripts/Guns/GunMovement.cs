@@ -12,7 +12,7 @@ public class GunMovement : MonoBehaviour
     [SerializeField] private Transform _parent;
     public int CurrentLap { get; private set; }
 
-    public Vector3 _targetPos = new (0, 4.1f, -8f);
+    public Vector3 TargetPos { get; private set; } = new (0, 4.1f, -8f);
     public float _timeToMerge = 1;
     private bool isMerged;
 
@@ -45,7 +45,7 @@ public class GunMovement : MonoBehaviour
     {
         if (isMerged) 
         {
-            if (transform.position == _targetPos)
+            if (transform.position == TargetPos)
                 Destroy(gameObject);
             return;
         }
@@ -71,9 +71,9 @@ public class GunMovement : MonoBehaviour
 
     public void OnMerge()
     {
-        _targetPos.y += Camera.main.transform.position.y;
+        TargetPos = new(TargetPos.x, TargetPos.y + Camera.main.transform.position.y);
         isMerged = true;
-        transform.DOMove(_targetPos, _timeToMerge);
+        transform.DOMove(TargetPos, _timeToMerge);
         Destroy(transform.parent.gameObject, _timeToMerge + 0.02f);
     }
 

@@ -7,6 +7,7 @@ public class CubeParticle : MonoBehaviour
     private Vector3 _targetPos;
     [SerializeField] private float _force;
     [SerializeField] private Rigidbody _rb;
+    [SerializeField] private Renderer _renderer;
 
     private void Start()
     {
@@ -14,5 +15,9 @@ public class CubeParticle : MonoBehaviour
         _rb.AddForce(_targetPos * _force);
     }
 
-    public void SetTargetPos(Vector3 targetPos) => _targetPos = targetPos;
+    public void Init(Vector3 targetPos, MaterialPropertyBlock materialPropertyBlock)
+    {
+        _targetPos = targetPos;
+        _renderer.SetPropertyBlock(materialPropertyBlock);
+    }
 }

@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: {x: 0, y: 0, z: 0}
-  _speed: 0.4
+  _speed: 0.6
 --- !u!96 &1001668185846730591
 TrailRenderer:
   serializedVersion: 2

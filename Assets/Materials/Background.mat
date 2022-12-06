@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BackTex:
-        m_Texture: {fileID: 2800000, guid: 3dd3637ffab10be40ae626f25e41f40b, type: 3}
+        m_Texture: {fileID: 2800000, guid: b03ee8c29361fb44ea5ba2ec6e261fcb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DownTex:
-        m_Texture: {fileID: 2800000, guid: 3dd3637ffab10be40ae626f25e41f40b, type: 3}
+        m_Texture: {fileID: 2800000, guid: b03ee8c29361fb44ea5ba2ec6e261fcb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -52,11 +52,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FrontTex:
-        m_Texture: {fileID: 2800000, guid: 3dd3637ffab10be40ae626f25e41f40b, type: 3}
+        m_Texture: {fileID: 2800000, guid: b03ee8c29361fb44ea5ba2ec6e261fcb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LeftTex:
-        m_Texture: {fileID: 2800000, guid: 3dd3637ffab10be40ae626f25e41f40b, type: 3}
+        m_Texture: {fileID: 2800000, guid: b03ee8c29361fb44ea5ba2ec6e261fcb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -76,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RightTex:
-        m_Texture: {fileID: 2800000, guid: 3dd3637ffab10be40ae626f25e41f40b, type: 3}
+        m_Texture: {fileID: 2800000, guid: b03ee8c29361fb44ea5ba2ec6e261fcb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -88,7 +88,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _UpTex:
-        m_Texture: {fileID: 2800000, guid: 3dd3637ffab10be40ae626f25e41f40b, type: 3}
+        m_Texture: {fileID: 2800000, guid: b03ee8c29361fb44ea5ba2ec6e261fcb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -116,7 +116,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Exposure: 1.05
+    - _Exposure: 0.88
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0

@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d0c767d5d917a4c9a3965deb30bbdb, type: 3}
   m_Name: BonusLap
   m_EditorClassIdentifier: 
-  <BasePrice>k__BackingField: 25
+  <BasePrice>k__BackingField: 1
   <PriceMultiplayer>k__BackingField: 1.5
   <MaxLevel>k__BackingField: 6
   <BonusName>k__BackingField: BonusLap
-  gunData: {fileID: 0}
